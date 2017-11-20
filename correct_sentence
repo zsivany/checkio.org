@@ -1,0 +1,22 @@
+def correct_sentence(text: str) -> str:
+    """
+        returns a corrected sentence which starts with a capital letter
+        and ends with a dot.
+    """
+    print (text[0])
+    text = text[0].upper() + text[1:]
+    print (text[0].upper())
+    print (text)
+    if text[-1] == '.':
+        print ('Here is a period')
+        print (text)
+    else:
+            print ('I have added a period')
+            text = (text + '.')
+            
+    
+    return text
+
+# test
+correct_sentence('hi there')
+
