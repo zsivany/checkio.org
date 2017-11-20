@@ -1,0 +1,17 @@
+def second_index(text: str, symbol: str):
+    """
+        returns the second index of a symbol in a given text
+    """
+    try:
+        first_index = text.index(symbol)
+        subset_text = text[first_index+1:]
+        index = subset_text.index(symbol)
+        print (len(text))
+      #  print (subset_text)
+      #  print (index)
+      #  print (index + 1 + first_index)
+    
+        return index + 1 + first_index
+
+    except ValueError:
+        return None
