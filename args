@@ -1,0 +1,11 @@
+
+def checkio(*args):
+
+    #print (args)
+    if (len(args)) == 0:
+        return 0
+    else:
+        list1 = args
+    #print (min(list1))
+    #print (max(list1))
+        return round(max(list1) - min(list1),4)
