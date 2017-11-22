@@ -1,0 +1,11 @@
+def checkio(array):
+    """
+        sums even-indexes elements and multiply at the last
+    """
+
+    if len(array) == 0:
+        return 0
+    else:
+        count = 0
+        for i in array[::2]:
+            count += i
