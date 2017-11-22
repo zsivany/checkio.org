@@ -1,0 +1,9 @@
+def find_message(text):
+    """Find a secret message"""
+
+    message = ""
+    for i in text:
+        if i.isupper():
+            message += i
+       
+    return message
