@@ -1,0 +1,10 @@
+def index_power(array, n):
+    """
+        Find Nth power of the element with index N.
+    """
+    #print (array[n])
+    #print (len(array))
+    if n >= len(array):
+        return -1
+    else:
+        return array[n]**n
