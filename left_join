@@ -1,0 +1,11 @@
+def left_join(phrases):
+    """
+        Join strings and replace "right" to "left"
+    """
+    left = []
+    for i in phrases:
+        j = i.replace("right","left")
+        left.append(j)
+    left_new = ",".join(left)
+
+    return left_new
