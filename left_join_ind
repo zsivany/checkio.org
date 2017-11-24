@@ -1,0 +1,4 @@
+def left_join(phrases):
+    phrases = ','.join(phrases)
+    word = phrases.replace("right","left")
+    return (word)
