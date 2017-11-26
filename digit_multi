@@ -1,0 +1,11 @@
+def checkio(number):
+
+    suma = 1
+    number = str(number).replace("0","1")
+    for i in str(number):
+        #if int(i) == 0:
+            #print ("Ez nulla")
+        #print (i)
+        suma *= int(i)
+        
+    return suma
