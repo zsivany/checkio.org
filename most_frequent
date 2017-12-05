@@ -1,0 +1,11 @@
+from collections import Counter
+
+
+def most_frequent(data):
+
+    # Using Counter and list comprehension to solve the task
+    max_keys = [k for k, v in Counter(data).items() if v == max(Counter(data).values())]
+    for i in max_keys:
+        i = str(i)
+
+    return i
