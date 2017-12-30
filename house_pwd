@@ -1,0 +1,9 @@
+def checkio(password):
+    a = len(password) >= 10
+    b = any(x.islower() for x in password)
+    c = any(x.isupper() for x in password)
+    d = any(x.isdigit() for x in password)
+    e = any(x.isalnum() for x in password)
+
+#    print (e)
+    return a & b & c & d & e
