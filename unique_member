@@ -1,0 +1,19 @@
+def checkio(data):
+
+    #print (Counter(data))
+    #print (max(Counter(data).values()))
+    non_unique = [k for k, v in Counter(data).items() if v > 1]
+    unique = [k for k, v in Counter(data).items() if v == 1]
+
+
+    #print ("non_unique: ", non_unique)
+    #print ("unique: ", unique)
+    #print (list(Counter(data).values()))
+
+    data2 = data   
+    if not non_unique:
+        return []
+   
+    data2 = [x for x in data2 if x not in unique]
+    #print (data2)
+    return data2
