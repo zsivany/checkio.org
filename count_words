@@ -1,0 +1,10 @@
+def count_words(text, words):
+
+    text = text.lower()
+
+    print (text)
+    counter = 0
+    for i in words:
+        if i in text:
+            counter += 1
+    return counter
