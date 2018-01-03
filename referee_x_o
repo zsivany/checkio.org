@@ -1,0 +1,39 @@
+def checkio(game):
+    #print (game[0][2])
+    #vertical check
+    #print (game)
+    for i in game:
+        if i.count('X') == 3:
+            return 'X'
+        if i.count('O') == 3:
+            return 'O'
+        #print (i)
+    #horizontal check
+    #print ("horizontal check")
+    game_t = [[x[i] for x in game] for i in range(max(len(r) for r in game))]
+    for i in game_t:
+        if i.count('X') == 3:
+            return 'X'
+        if i.count('O') == 3:
+            return 'O'
+    #diagonal check
+    #print ("diagonal")
+    
+    diagonal = ([game[i][i] for i in range(len(game[0]))])
+    if (diagonal.count('X')) == 3:
+        return 'X'
+    if (diagonal.count('O')) == 3:
+        return 'O'
+    
+
+    #print ("reverse_diagonal")
+
+    l = len(game[0])
+    reverse_diagonal = ([game[l-1-i][i] for i in range(l-1,-1,-1)])
+
+    if (reverse_diagonal.count('X')) == 3:
+        return 'X'
+    if (reverse_diagonal.count('O')) == 3:
+        return 'O'
+    
+    return 'D'
