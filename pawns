@@ -1,0 +1,57 @@
+def safe_pawns(pawns):
+
+    counter = 0
+    for i in pawns:
+        print (i)
+        if i[0] == "a":
+            print (i[0], " safe places b")
+            print (i[0],i[1])
+            if "b"+str(int(i[1]) - 1 ) in pawns:
+                counter += 1
+
+        if i[0] == "b":
+            print (i[0], " safe places a, c")
+            print (i[0],i[1])
+            if "a"+str(int(i[1]) - 1 ) in pawns or "c"+str(int(i[1]) - 1 ) in pawns:
+                counter += 1
+
+        if i[0] == "c":
+            print (i[0], " safe places b, d")
+            print (i[0],i[1])
+            if "b"+str(int(i[1]) - 1 ) in pawns or "d"+str(int(i[1]) - 1 ) in pawns:
+                counter += 1
+
+        if i[0] == "d":
+            print (i[0], " safe places c, e")
+            print (i[0],i[1])
+            if "c"+str(int(i[1]) - 1 ) in pawns or "e"+str(int(i[1]) - 1 ) in pawns:
+                counter += 1
+
+        if i[0] == "e":
+            print (i[0], " safe places d, f")
+            print (i[0],i[1])
+            if "d"+str(int(i[1]) - 1 ) in pawns or "f"+str(int(i[1]) - 1 ) in pawns:
+                counter += 1
+
+
+        if i[0] == "f":
+            print (i[0], " safe places e, g")
+            print (i[0],i[1])
+            if "e"+str(int(i[1]) - 1 ) in pawns or "g"+str(int(i[1]) - 1 ) in pawns:
+                counter += 1
+
+    
+        if i[0] == "g":
+            print (i[0], " safe places f, h")
+            print (i[0],i[1])
+            if "f"+str(int(i[1]) - 1 ) in pawns or "h"+str(int(i[1]) - 1 ) in pawns:
+                counter += 1
+
+        if i[0] == "h":
+            print (i[0], " safe places g")
+            print (i[0],i[1])
+            if "g"+str(int(i[1]) - 1 ) in pawns:
+                counter += 1
+
+
+    return counter
