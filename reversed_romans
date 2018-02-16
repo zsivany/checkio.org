@@ -1,0 +1,33 @@
+def reverse_roman(roman_string):
+
+    arabic_number = 0
+    romans = {
+        "I" : 1,
+        "V" : 5,
+        "X" : 10,
+        "L" : 50,
+        "C" : 100,
+        "D" : 500,
+        "M" : 1000
+                }
+
+    special = {
+        "IV" : 4,
+        "IX" : 9,
+        "XL" : 40,
+        "XC" : 90,
+        "CD" : 400,
+        "CM" : 900
+        }
+
+
+    for i in special:
+        if i in roman_string:
+            roman_string = roman_string.replace(i, '')
+            arabic_number = arabic_number + special[i]
+
+    for r in roman_string:
+        if r in romans:
+            arabic_number = arabic_number + romans[r]
+
+    return arabic_number
