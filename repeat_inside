@@ -1,0 +1,34 @@
+def checkio(issequence):
+    #if len(issequence)%2 != 0:
+    #    #print ("not seq")
+    #    return False
+
+    
+    for i in range(int(len(issequence)/2 + 1)):
+       # print ("string part: ", issequence[:i])
+        newseq = issequence.replace(issequence[:i], "")
+       # print ("maradek: ", newseq)
+
+        if newseq == "":
+            return True
+
+    return False
+
+
+#print (checkio("bb"))
+
+def repeat_inside(line):
+    
+    length = len(line)
+    longest_seq = ''
+    for i in range(length):
+        for j in range(i, length):
+            seq = (line[i:j+1])
+            #print (seq)
+            if checkio(seq):
+                #print ("Match!")
+                if len(longest_seq) < len(seq):
+                    longest_seq = seq
+                
+
+    return longest_seq
